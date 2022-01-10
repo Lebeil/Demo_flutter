@@ -1,3 +1,4 @@
+import 'package:demo/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,38 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Data'),
+      home: const Home(),
     );
   }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Column(
-        children: <Widget>[
-          Text(title),
-          const Icon(Icons.backup, size: 50, color: Colors.green, semanticLabel: "Upload"),
-          Text(title),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.favorite, color: Colors.pink),
-              Text(title),
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-
 }
